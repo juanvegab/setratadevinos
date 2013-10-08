@@ -1,0 +1,13 @@
+[08-Mar-2013 23:27:03] PHP Warning:  include(headerphp) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/setratad/public_html/dev/index.php on line 10
+[08-Mar-2013 23:27:03] PHP Warning:  include(headerphp) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/setratad/public_html/dev/index.php on line 10
+[08-Mar-2013 23:27:03] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'headerphp' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/setratad/public_html/dev/index.php on line 10
+[08-Jun-2013 17:34:03] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/setratad/public_html/dev/index.php on line 48
+[08-Jun-2013 17:34:51] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/setratad/public_html/dev/index.php on line 48
+[08-Jun-2013 17:35:06] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/setratad/public_html/dev/index.php on line 48
+[08-Jun-2013 17:35:26] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/setratad/public_html/dev/index.php on line 48
+[08-Jun-2013 17:36:14] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/setratad/public_html/dev/index.php on line 49
+[08-Jun-2013 17:36:45] PHP Warning:  include(dataAccess.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/setratad/public_html/dev/index.php on line 1
+[08-Jun-2013 17:36:45] PHP Warning:  include(dataAccess.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/setratad/public_html/dev/index.php on line 1
+[08-Jun-2013 17:36:45] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'dataAccess.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/setratad/public_html/dev/index.php on line 1
+[08-Jun-2013 17:36:45] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'setratad'@'localhost' (using password: NO) in /home/setratad/public_html/dev/index.php on line 44
+[08-Jun-2013 17:36:45] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/setratad/public_html/dev/index.php on line 44
