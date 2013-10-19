@@ -38,7 +38,17 @@ module.exports = function (grunt) {
         tasks: ['coffee:test']
       },
       compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        files: [
+          '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/admin{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/admin/modules{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/admin/partials{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/site{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/site/modules{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/site/partials{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/utils{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/vendor{,*/}*.{scss,sass}'
+        ],
         tasks: ['compass:server', 'autoprefixer']
       },
       styles: {

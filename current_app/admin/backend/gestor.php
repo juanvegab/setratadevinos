@@ -165,7 +165,16 @@
 				$productList .= ']}';
 				$productList = str_replace(",]}", "]}", $productList);
 				echo $productList;
-  }
+		}
+	}else if($action=='getProductJson2'){
+		$sql = "SELECT TProduct.nombre, TCategory.tipo as tipo, TProduct.cata, TProduct.variedad, anada, TCategory.do as do, TManufacturer.nombre as nombre_bodega, TProduct.descripcion, precio, TProduct.imageURL as productImage, TProduct.id, disable,TCategory_id as id_categoria, TManufacturer_id as id_bodega FROM TProduct LEFT JOIN TCategory ON TProduct.TCategory_id = TCategory.id LEFT JOIN TManufacturer ON TProduct.TManufacturer_id = TManufacturer.id";
+		try{
+			$stmt = mysql_query($sql);
+			$prodWine = $stmt->fetchAll(PDO::FETCH_OBJ);
+			echo '{"wine":' . json_encode($prodWine) . '}';
+		}catch(PDOException $e){
+			echo '{"error":{"text":'. $e->getMessage() .'}}';
+		}
 	}else if($action=='getBodegaJson'){
 		$sql = "SELECT nombre, descripcion, ubicacion, direccion, id FROM TManufacturer;";
 		if ($result=mysql_query($sql) or die ("Could not query ".$sql)) {

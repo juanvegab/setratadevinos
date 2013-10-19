@@ -1,0 +1,33 @@
+.flexImg{
+	display: block;
+	width: 100%;
+}
+.carousel{
+	border: 6px solid #5e130d;
+	margin-bottom: 20px;
+	.carousel-control{
+		margin-top: 20px;
+	}
+}
+.main-container{
+	margin-bottom: 20px;
+	section{
+		article{
+			background: white;
+			border: 6px solid #5e130d;
+			padding: 25px;
+			h1{
+				font-size: emCalc(50);
+				line-height: 1;
+				margin: 25px auto 50px;
+				color: black;
+				text-align: center;
+			}
+			p{
+				font-size: emCalc(18);
+				text-align: justify;
+				margin-bottom: 35px;
+			}
+		}
+	}
+}

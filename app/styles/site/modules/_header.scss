@@ -1,0 +1,44 @@
+nav.navbar{
+	position: relative;
+	border-radius: 0;
+	z-index: 10;
+	.navbar-inner{
+		background: #500707;
+		border: none;
+ 	border-radius: 0;
+		.container{
+			max-width: 945px;
+			button{
+				float: none;
+				position: absolute;
+				right: 25px;
+				top: 35px;
+				background: transparent;
+				border: 2px solid white;
+				border-radius: 0;
+				padding: 5px;
+			}
+			.brand{
+				display: block;
+				width: 350px;
+				margin-bottom: -75px;
+				margin-top: 23px;
+			}
+			.nav-collapse{
+				ul.nav{
+					margin-top: 60px;
+					li{
+						a{
+							font-size: emCalc(16);
+							color: white;
+							text-shadow: none;
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

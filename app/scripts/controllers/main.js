@@ -1,10 +1,5 @@
 'use strict';
 
-angular.module('setratadevinos.comApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('setratadevinos.comApp').controller('MainCtrl', function ($scope, $resource) {
+	var wines = $resource('http://setratadevinos.com/admin/backend/gestor.php?action=getProductJson2');
+});

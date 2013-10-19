@@ -1,0 +1,54 @@
+footer{
+	color: white;
+	background: #6c2929;
+/* 	position: absolute; */
+	bottom: 0;
+	width: 100%;
+	border-top: 6px solid #5e130d;
+	span{
+		font-size: emCalc(12);
+	}
+	a{
+		color: white;
+		&:hover{
+			color: white;
+			text-decoration: underline;
+		}
+	}
+	.site-nav{
+		margin: 5px 0 15px;
+		h4{
+			font-size: emCalc(16);
+			text-transform: uppercase;
+			text-shadow: none;
+			font-weight: normal;
+			margin: 20px 0 10px;
+		}
+		ul{
+			li{
+				line-height: 15px;
+				font-size: emCalc(12);
+			}
+		}
+		.vegabarca-contact{
+			margin-left: emCalc(27);
+			display: block;
+			img{
+				display: block;
+				margin-left: 2.4em;
+			}
+		}
+	}
+	.site-rights{
+		background: #5e130d;
+		padding: 20px 0;
+		.brand-footer{
+			width: 160px;
+			display: block;
+		}
+		p{
+			color: white;
+			margin-top: 20px
+		}
+	}
+}
