@@ -1,10 +1,10 @@
 <section id="productos" ng-controller="ProductosCtrl">
-	<div id="slider-fluid-banner" class="carousel slide" data-interval="7000">
+	<div id="slider-fluid-banner" class="banner carousel slide" data-interval="1000" data-ride="carousel">
 		<div class="carousel-inner">
-			<div class="item active">
+			<div class="item">
 				<img class="flexImg" src="../images/index_banner/slide1-inicio-se-trata-de-vinos.jpg" alt="Slide 1" title="Productos de Se Trata de Vinos" />
 			</div>
-			<div class="item">
+			<div class="item active">
 				<img class="flexImg" src="../images/index_banner/slide2-inicio-se-trata-de-vinos.jpg" alt="Slide 2" title="Expo Vino Costa Rica" />
 			</div>
 			<div class="item">
@@ -19,10 +19,20 @@
 	</div>
 	<article class="clearfix">
 		<h1>Productos</h1>
-		<ul>
-			<li ng-repeat="wine in wines">
-				{{wine.name}}
-			</li>
-		</ul>
+		<section class="product-list clearfix">
+			<a ng-repeat="wine in wines" href="#/productos/{{wine.id}}">
+				<div>
+					<img src="data:image/jpg/png/gif;base64,{{wine.product_image}}" alt="{{wine.nombre}}" />
+					<span title="{{wine.nombre_bodega}}">{{wine.nombre_bodega}}</span>
+				</div>
+				<p><span ng-bind-html-unsafe="wine.nombre" title="{{wine.nombre}}">{{wine.nombre}}</span><br/><span><i>{{wine.tipo}}</i></span></p>
+			</a>
+		</section>
+		<p ng-show="!wines.length">No hay productos disponibles.</p>
 	</article>
 </section>
+<script>
+	$(document).ready(function(){
+		$('.carousel').carousel();
+	});
+</script>

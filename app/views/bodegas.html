@@ -1,1 +1,38 @@
-<p>This is the bodegas view.</p>
+<section id="bodegas" ng-controller="BodegasCtrl">
+	<div id="slider-fluid-banner" class="banner carousel slide" data-interval="7000">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img class="flexImg" src="../images/index_banner/slide1-inicio-se-trata-de-vinos.jpg" alt="Slide 1" title="Productos de Se Trata de Vinos" />
+			</div>
+			<div class="item">
+				<img class="flexImg" src="../images/index_banner/slide2-inicio-se-trata-de-vinos.jpg" alt="Slide 2" title="Expo Vino Costa Rica" />
+			</div>
+			<div class="item">
+				<img class="flexImg" src="../images/index_banner/slide3-inicio-se-trata-de-vinos.jpg" alt="Slide 3" title="Eventos Anteriores" />
+			</div>
+			<div class="item">
+				<img class="flexImg" src="../images/index_banner/slide4-inicio-se-trata-de-vinos.jpg" alt="Slide 4" title="Coraz&oacute;n Loco, de Andres Iniesta" />
+			</div>
+		</div>
+		<a href="#slider-fluid-banner" class="left carousel-control" data-slide="prev">‹</a>
+		<a href="#slider-fluid-banner" class="right carousel-control" data-slide="next">›</a>
+	</div>
+	<article class="clearfix">
+		<h1>Bodegas</h1>
+		<p>En <strong>"Se Trata de Vinos..."</strong> ofrecemos una interesante lista de bodegas espa&ntilde;olas que nos proveen de vinos de muy alta calidad.</p>
+		<p>Acontinuaci&oacute;n presentamos una breve rese&ntilde;a de las bodegas junto con el listado de los vinos que producen.</p>
+		<section class="bodegas-list clearfix">
+			<a ng-repeat="bodega in bodegas" href="#/bodegas/{{bodega.id}}">
+					<!-- <h2>{{bodega.nombre}}</h2> -->
+					<h2>
+						<img src="data:image/jpg/png/gif;base64,{{bodega.imageURL}}" alt="{{bodega.nombre}}" />
+					</h2>
+			</a>
+		</section>
+	</article>
+</section>
+<script>
+	$(document).ready(function(){
+		$('.carousel').carousel();
+	});
+</script>

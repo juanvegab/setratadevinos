@@ -1,1 +1,56 @@
-<p>This is the producto view.</p>
+<section id="producto" ng-controller="ProductoCtrl">
+	<article class="clearfix">
+		<a href back-button class="btn back-btn"><i class="icon-white icon-circle-arrow-left"></i> Volver</a>
+		<h1 ng-show="wine" ng-bind-html-unsafe="wine.nombre">{{wine.nombre}}</h1>
+		<article ng-show="wine" class="product-data">
+<!-- 			<a class="facebookShare" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"> <img src="http://4.bp.blogspot.com/-mV4cTOHgwbM/UTzsbL2gNxI/AAAAAAAAdOQ/4VGL2VxGyPg/s82/facebook_compartir.png" alt="Facebook Share Button"></a> -->
+			<hr class="line" />
+			<div class="product-attributes">
+				<div>
+					<p>Nombre</p>
+					<h4 ng-bind-html-unsafe="wine.nombre">{{wine.nombre}}</h4>
+				</div>
+				<div>
+					<p>Tipo</p>
+					<h4>{{wine.tipo}}</h4>
+				</div>
+				<div>
+					<p>Variedad</p>
+					<h4>{{wine.variedad}}</h4>
+				</div>
+				<div>
+					<p>A&ntilde;ada</p>
+					<h4>{{wine.anada}}</h4>
+				</div>
+				<div>
+					<p>Precio</p>
+					<h4 class="colones">¢{{wine.precio}}</h4>
+				</div>
+				<div>
+					<p>Denominaci&oacute;n de Origen</p>
+					<h4>{{wine.do}}</h4>
+				</div>
+				<div>
+					<p>Bodega</p>
+					<h4>{{wine.nombre_bodega}}</h4>
+				</div>
+			</div>
+			<div class="product-img">
+				<img class="flexImg" src="data:image/jpg/png/gif;base64,{{wine.product_image}}" ng-bind-html-unsafe="wine.nombre" alt="{{wine.nombre}} de {{wine.nombre_bodega}} - {{wine.tipo}}" title="{{wine.nombre}} de {{wine.nombre_bodega}} - {{wine.tipo}}">
+			</div>
+			<div id="product-descriptions">
+				<hr class="line" />
+				<p>Descripci&oacute;n</p>
+				<div class="contentText" ng-bind-html="wine.descripcion">
+					{{wine.descripcion}}
+				</div>
+				<hr class="line" />
+				<p>Cata</p>
+				<div class="contentText" ng-bind-html="wine.cata">
+					{{wine.cata}}
+				</div>
+			</div>
+		</article>
+		<p ng-show="!wine">El producto no existe en el inventario.</p>
+	</article>
+</section>

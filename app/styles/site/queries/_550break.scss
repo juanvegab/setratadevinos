@@ -1,4 +1,7 @@
-@media (max-width: 549px) {
+@media only screen and (max-width: 549px) {
+	body{
+		font-size: 10px;
+	}
 	nav.navbar{
 		.navbar-inner{
 			.container{
@@ -18,6 +21,12 @@
 				width: 100%;
 				margin: 0 auto 40px;
 			}
+		}
+	}
+	footer{
+		.span3{
+			width: 50%;
+			float: left;
 		}
 	}
 }

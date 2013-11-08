@@ -1,8 +1,11 @@
 <?PHP 
 	$hostname = "localhost";
 	$database = "setratad_wineSite";
-	$username = "setratad_vega";
-	$password = "vegaba";
+	$username = "root";
+	$password = "root";
+	
+	//mysql_connect('localhost', 'root', 'root');
+	
 	$mysqli = new mysqli($hostname, $username, $password, $database);
 	
 	$conn = mysql_pconnect($hostname, $username, $password) or trigger_error(mysql_error(),E_USER_ERROR); 

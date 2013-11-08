@@ -1,0 +1,26 @@
+section#bodega{
+	article{
+		.bodega-data{
+			margin: 0 13%;
+			.bodega-attributes{
+				.bodega-logo{
+					float: right;
+					margin-bottom: 25px;
+				}
+				h4{
+					font-size: emCalc(16);
+				}
+			}
+			.bodega-descripcion{
+				h3{
+					font-size: emCalc(18);
+				}
+			}
+			.bodega-productos{
+				.product-list{
+					margin: 0 5px;
+				}
+			}
+		}
+	}
+}

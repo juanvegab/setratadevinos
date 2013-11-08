@@ -1,13 +1,12 @@
 'use strict';
 
-angular.module('setratadevinos.comApp').controller('ProductosCtrl', function ($scope, productsServices) {
-	var wines = [];
+angular.module('setratadevinos.comApp')
+	.controller('ProductosCtrl', function ($scope, productsServices) {
 	
-	var updateWines = function(data, status){
-		wines = data;
-		console.log(wines);
-	}
+	$scope.wines;
 	
-	productsServices.getProducts().success(updateWines);
+	productsServices.getProducts().success(function(data){
+		$scope.wines = data;
+	});
 	
 });

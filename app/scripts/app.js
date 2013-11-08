@@ -1,10 +1,7 @@
 'use strict';
 
-angular.module('setratadevinos.comApp', [])
-  .config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
-    $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common["X-Requested-With"];
-    
+var setratadevinos = angular.module('setratadevinos.comApp', ['ngSanitize'])
+  .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -14,9 +11,17 @@ angular.module('setratadevinos.comApp', [])
         templateUrl: 'views/productos.html',
         controller: 'ProductosCtrl'
       })
+      .when('/productos/:id', {
+        templateUrl: 'views/producto.html',
+        controller: 'ProductoCtrl'
+      })
       .when('/bodegas', {
         templateUrl: 'views/bodegas.html',
         controller: 'BodegasCtrl'
+      })
+      .when('/bodegas/:id', {
+        templateUrl: 'views/bodega.html',
+        controller: 'BodegaCtrl'
       })
       .when('/contacto', {
         templateUrl: 'views/contacto.html',
@@ -46,11 +51,13 @@ angular.module('setratadevinos.comApp', [])
         templateUrl: 'views/vendedores.html',
         controller: 'VendedoresCtrl'
       })
-      .when('/producto', {
-        templateUrl: 'views/producto.html',
-        controller: 'ProductoCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
   }]);
+  
+setratadevinos.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+]);

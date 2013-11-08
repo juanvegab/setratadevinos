@@ -1,5 +1,5 @@
 <section id="resena" ng-controller="MainCtrl">
-	<div id="slider-fluid-banner" class="carousel slide" data-interval="7000">
+	<div id="slider-fluid-banner" class="banner carousel slide" data-interval="7000">
 		<div class="carousel-inner">
 			<div class="item active">
 				<img class="flexImg" src="../images/index_banner/slide1-inicio-se-trata-de-vinos.jpg" alt="Slide 1" title="Productos de Se Trata de Vinos" />
@@ -14,8 +14,8 @@
 				<img class="flexImg" src="../images/index_banner/slide4-inicio-se-trata-de-vinos.jpg" alt="Slide 4" title="Coraz&oacute;n Loco, de Andres Iniesta" />
 			</div>
 		</div>
-		<a href="#slider-fluid-banner" class="left carousel-control" data-slide="prev">?</a>
-		<a href="#slider-fluid-banner" class="right carousel-control" data-slide="next">?</a>
+		<a href="#slider-fluid-banner" class="left carousel-control" data-slide="prev">‹</a>
+		<a href="#slider-fluid-banner" class="right carousel-control" data-slide="next">›</a>
 	</div>
 	<article class="clearfix">
 		<h1>Rese&ntilde;a</h1>
@@ -25,3 +25,8 @@
 		<p>Haciendo nuestra la visi&oacute;n de una de nuestras representadas <strong>"del vino como un producto universal que materializa la expresi&oacute;n cultural de una determinada tierra, y como complemento espiritual de la comida dentro del arte de la gastronom&iacute;a" es que los invitamos a conocer nuestros vinos."<strong></p>
 	</article>
 </section>
+<script>
+	$(document).ready(function(){
+		$('.carousel').carousel();
+	});
+</script>

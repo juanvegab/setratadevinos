@@ -64,7 +64,7 @@
 		
 	}else if($action=='12'){
 		
-	}else if($action=='13'){
-		
+	}else{
+		echo "Backend Manager";
 	}
 ?>

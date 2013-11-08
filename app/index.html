@@ -4,9 +4,9 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
+		<title>Se Trata de Vinos</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -38,8 +38,12 @@
 						<ul class="nav pull-left">
 							<li><a href="#/productos" alt="Productos" title="Productos">Productos</a></li>
 							<li><a href="#/bodegas" alt="Bodegas" title="Bodegas">Bodegas</a></li>
+							<li><a href="#/resena" alt="Resena" title="Resena">Rese&ntilde;a</a></li>
+							<li><a href="#/quienes_somos" alt="Quienes Somos?" title="Quienes Somos?">¿Qui&eacute;nes somos?</a></li>
+<!--
 							<li><a href="#/ofertas" alt="Ofertas" title="Ofertas">Ofertas</a></li>
 							<li><a href="#/empresa" alt="Empresa" title="Empresa">Empresa</a></li>
+-->
 							<li><a href="#/contacto" alt="Contacto" title="Contacto">Contacto</a></li>
 						</ul>
 					</div>
@@ -48,27 +52,24 @@
 		</nav>
 		<div class="main-container container" ng-view="">
 		</div>
-		<footer>
+		<footer ng-controller="FooterCtrl">
 			<div class="container">
 				<div class="site-nav row-fluid">
 					<div class="span12">
 						<div class="span3">
 							<a href="#/productos" title="Productos - Se Trata de Vinos"><h4>Productos</h4></a>
 							<ul class="unstyled">
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Contact & support</a></li>
-								<li><a href="#">Enterprise</a></li>
-								<li><a href="#">Site status</a></li>
+								<li ng-repeat="wine in wines">
+									<a href="#/productos/{{wine.id}}" ng-bind-html-unsafe="wine.nombre" title="{{wine.nombre}} - {{wine.nombre_bodega}}">{{wine.nombre}}</a>
+								</li>
 							</ul>
 						</div>
 						<div class="span3">
 							<a href="#/bodegas" title="Bodegas - Se Trata de Vinos"><h4>Bodegas</h4></a>
 							<ul class="unstyled">
-								<li><a href="#">Product for Mac</a></li>
-								<li><a href="#">Product for Windows</a></li>
-								<li><a href="#">Product for Eclipse</a></li>
-								<li><a href="#">Product mobile apps</a></li>
+								<li ng-repeat="bodega in bodegas">
+									<a href="#/bodegas/{{bodega.id}}" ng-bind-html-unsafe="bodega.nombre" title="{{bodega.nombre}}">{{bodega.nombre}}</a>
+								</li>
 							</ul>
 						</div>
 						<div class="span3">
@@ -111,7 +112,7 @@
 								<a href="#/" class="brand-footer"><img class="flexImg" src="images/se-trata-de-vinos-logo.png" alt="Logo - Se Trata de Vinos" title="Inicio"></a>
 							</div>
 							<div class="span5">
-								<p class="muted pull-right">© 2013 Se Trata De Vinos. Todos Los Derechos Reservados</p>
+								<p class="muted pull-right">© 2013 Se Trata De Vinos.<br />Todos Los Derechos Reservados</p>
 							</div>
 						</div>
 					</div>
@@ -151,20 +152,26 @@
 		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
 		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 		<!-- endbuild -->
+		<script src="bower_components/underscore/underscore-min.js"></script>
 		<!-- build:js({.tmp,app}) scripts/scripts.js -->
 		<script src="scripts/app.js"></script>
 		<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/productos.js"></script>
-<script src="scripts/controllers/bodegas.js"></script>
-<script src="scripts/controllers/contacto.js"></script>
-<script src="scripts/controllers/empresa.js"></script>
-<script src="scripts/controllers/ofertas.js"></script>
-<script src="scripts/controllers/resena.js"></script>
-<script src="scripts/controllers/quienes_somos.js"></script>
-<script src="scripts/controllers/donde_estamos.js"></script>
-<script src="scripts/controllers/vendedores.js"></script>
-<script src="scripts/controllers/producto.js"></script>
-<script src="scripts/services/productsServices.js"></script>
+		<script src="scripts/controllers/productos.js"></script>
+		<script src="scripts/controllers/bodegas.js"></script>
+		<script src="scripts/controllers/contacto.js"></script>
+		<script src="scripts/controllers/empresa.js"></script>
+		<script src="scripts/controllers/ofertas.js"></script>
+		<script src="scripts/controllers/resena.js"></script>
+		<script src="scripts/controllers/quienes_somos.js"></script>
+		<script src="scripts/controllers/donde_estamos.js"></script>
+		<script src="scripts/controllers/vendedores.js"></script>
+		<script src="scripts/controllers/producto.js"></script>
+		<script src="scripts/services/productsServices.js"></script>
+		<script src="scripts/services/bodegasServices.js"></script>
+<script src="scripts/controllers/footer.js"></script>
+<script src="scripts/directives/googleMap.js"></script>
+<script src="scripts/controllers/bodega.js"></script>
+<script src="scripts/directives/backButton.js"></script>
 		<!-- endbuild -->
 </body>
 </html>
