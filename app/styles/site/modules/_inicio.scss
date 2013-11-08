@@ -3,6 +3,13 @@ section#inicio{
 		img{
 			display: block;
 			margin: 0 30px;
+			width: 45%;
+			&.pull-right{
+				margin-right: 0;
+			}
+			&.pull-left{
+				margin-left: 0;
+			}
 		}
 	}
 }

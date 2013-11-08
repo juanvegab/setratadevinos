@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('setratadevinos.comApp').factory('bodegasServices', function ($http) {
-	var url = 'backend/bodegas.json';
-	//var url = 'http://setratadevinos.com/admin/backend/manager.php';
+	//var url = 'backend/bodegas.json';
+	var url = '../admin/backend/manager.php';
 	
 	return {
 		getBodegas: function(){

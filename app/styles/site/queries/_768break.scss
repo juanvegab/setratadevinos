@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) {
+	footer{
+		border: 6px solid #5e130d;
+		.site-nav{
+			.span3 {
+				width: 23%;
+				float: left;
+				margin-left: 2%;
+				margin-right: 0;
+				min-width: 160px;
+				&:first-child {
+					margin-left: 2%;
+				}
+			}
+		}
+	}
+}
